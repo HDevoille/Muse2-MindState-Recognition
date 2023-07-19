@@ -83,10 +83,10 @@ y_t = np.tile(y,(100,1))
 callback = tf.keras.callbacks.EarlyStopping(monitor='val_binary_accuracy',restore_best_weights=True,baseline=0.70)
 
 model = tf.keras.models.Sequential([
-    # tf.keras.layers.Dense(500,activation='relu'),
-    tf.keras.layers.Dense(275,activation='relu'),
-    tf.keras.layers.Dense(150,activation='relu'),
-    tf.keras.layers.Dense(25,activation='relu'),
+    tf.keras.layers.Dense(500,activation='relu',kernel_regularizer=tf.keras.regularizers.l2(0.0001)),
+    tf.keras.layers.Dense(275,activation='relu',kernel_regularizer = tf.keras.regularizers.l2(0.0001)),
+    tf.keras.layers.Dense(150,activation='relu',kernel_regularizer = tf.keras.regularizers.l2(0.0001)),
+    tf.keras.layers.Dense(25,activation='relu',kernel_regularizer = tf.keras.regularizers.l2(0.0001)),
     tf.keras.layers.Dense(1,activation='sigmoid')
 ])
 
