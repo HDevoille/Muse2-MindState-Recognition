@@ -9,7 +9,10 @@ F03 = pd.read_csv("Dataset/F03.csv")
 F04 = pd.read_csv("Dataset/F04.csv")
 F05 = pd.read_csv("Dataset/F05.csv")
 F06 = pd.read_csv("Dataset/F06.csv")
-Focus_subject0 = pd.concat([F01,F02,F03,F04,F05,F06],ignore_index=True)
+F07 = pd.read_csv("Dataset/F07.csv")
+F08 = pd.read_csv("Dataset/F08.csv")
+F09 = pd.read_csv("Dataset/F09.csv")
+Focus_subject0 = pd.concat([F01,F02,F03,F04,F05,F06,F07,F08,F09],ignore_index=True)
 Focus_subject0['label'] = [1 for i in range(len(Focus_subject0))]
 
 # F11 = pd.read_csv("Dataset/F11.csv")
@@ -38,7 +41,10 @@ R03 = pd.read_csv("Dataset/R03.csv")
 R04 = pd.read_csv("Dataset/R04.csv")
 R05 = pd.read_csv("Dataset/R05.csv")
 R06 = pd.read_csv("Dataset/R06.csv")
-Relax_subject0 = pd.concat([R01,R02,R03,R04,R05,R06],ignore_index=True)
+R07 = pd.read_csv("Dataset/R07.csv")
+R08 = pd.read_csv("Dataset/R08.csv")
+R09 = pd.read_csv("Dataset/R09.csv")
+Relax_subject0 = pd.concat([R01,R02,R03,R04,R05,R06,R07,R08,R09],ignore_index=True)
 Relax_subject0['label'] = [0 for i in range(len(Relax_subject0))]
 
 # R11 = pd.read_csv("Dataset/R11.csv")
